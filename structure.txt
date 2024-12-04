@@ -1,0 +1,73 @@
+NoorERP/
+├── Core/
+│   ├── Models/
+│   │   ├── BaseModel.cs
+│   │   └── ...other base models
+│   ├── Interfaces/
+│   │   ├── IModule.cs
+│   │   └── ...other interfaces
+│   └── Services/
+│       ├── LoggingService.cs
+│       ├── CachingService.cs
+│       └── ...other core services
+├── BaseModule/
+│   ├── Data/
+│   │   ├── Models/
+│   │   │   ├── User.cs
+│   │   │   └── ...other models
+│   │   ├── Migrations/
+│   │   │   ├── InitialCreate.cs
+│   │   │   └── ...other migrations
+│   ├── Infrastructure/
+│   │   ├── Persistence/
+│   │   │   ├── DbContext.cs
+│   │   │   └── ...repository implementations
+│   │   ├── Services/
+│   │   │   ├── UserService.cs
+│   │   │   └── ...other infrastructure services
+│   ├── Controllers/
+│   │   ├── UserController.cs
+│   │   └── ...other controllers
+├── Modules/
+│   ├── ModuleA/
+│   │   ├── ...ModuleA specific files
+│   ├── ModuleB/
+│   │   ├── ...ModuleB specific files
+│
+├── UIs/
+│   ├── Maui/
+│   │   ├── Views/
+│   │   │   ├── HomeView.cs
+│   │   │   └── ...other views
+│   │   ├── ViewModels/
+│   │   │   ├── HomeViewModel.cs
+│   │   │   └── ...other view models
+│   │   └── ...other Maui specific folders
+│   ├── Desktop/  # Add specific folders for Desktop UI if needed
+│   │   └── ...
+│   ├── Mobile/   # Add specific folders for Mobile UI if needed
+│   │   └── ...
+│   └── Console/  # Add specific folders for Console UI if needed
+│
+├── Tests/
+│   ├── UnitTests/
+│   │   ├── CoreTests/
+│   │   ├── BaseModuleTests/
+│   │   ├── ModuleATests/
+│   │   └── ...other unit tests
+│   ├── IntegrationTests/
+│   │   ├── ...integration tests
+├── Docker/
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+├── Configuration/
+│   ├── appsettings.json
+│   ├── appsettings.Development.json
+│   ├── appsettings.Production.json
+├── Scripts/
+│   ├── build.sh
+│   ├── deploy.sh
+├── Documentation/
+│   ├── Architecture.md
+│   ├── Design.md
+│   ├── ...other documentation
