@@ -1,16 +1,24 @@
+# region <--- DIRECTIVES --->
+using System.Text.Json.Serialization;
+
+# endregion
+
 namespace NoorERP.Core.Models
 {
     public abstract class BaseModel
     {
-        public int Id { get; set; }
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
 
-        // Metadata Properties
-        public required string ModelName { get; set; }
-        public required string TableName { get; set; }
-        public bool IsAbstract { get; set; } = true;
-        public bool IsTransient { get; set; } = false;
-        public bool IsCustom { get; set; } = false;
-        public string DisplayName { get; set; } = string.Empty;
+        [JsonPropertyName("name")]
+        public string Name { get; set; } = string.Empty;
+
+        [JsonPropertyName("record_permissions")]
+        public RecordPermissions RecordPermissions { get; set; } = new RecordPermissions();
+
+        [JsonPropertyName("fields")]
+        public List<BaseField> Fields { get; set; } = new List<BaseField>();
+
     }
 }
 

@@ -1,0 +1,4 @@
+﻿namespace NoorERP.Core.Models
+{
+
+}
