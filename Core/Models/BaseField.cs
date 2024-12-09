@@ -46,5 +46,48 @@ namespace NoorERP.Core.Models
         [JsonPropertyName("enable_security")]
         public bool? EnableSecurity { get; set; }
 
+        public abstract FieldTypes FieldType { get; }
+
+        public virtual object? GetDefaultValue() => null;
+
+        // Consider adding validation methods or properties
+        public virtual bool IsValid(object value) => true;
+
+
+        public enum FieldTypes
+        {
+            AutoNumber,
+            CheckBox,
+            Currency,
+            Date,
+            DateTime,
+            Email,
+            File,
+            Formula,
+            Geography,
+            Guid,
+            Html,
+            Image,
+            MultiLineText,
+            MultiSelect,
+            Number,
+            Password,
+            Percent,
+            Phone,
+            Select,
+            Text,
+            TreeSelect,
+            Url,
+            Boolean,
+            Binary,
+            Char,
+            Int,
+            Float,
+            Decimal,
+            Double,
+
+
+        }
+
     }
 }
