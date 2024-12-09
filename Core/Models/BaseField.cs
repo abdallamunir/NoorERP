@@ -16,14 +16,23 @@ namespace NoorERP.Core.Models
         [JsonPropertyName("label")]
         public string Label { get; set; } = string.Empty;
 
+        [JsonPropertyName("label_ar")]
+        public string LabelAr { get; set; } = string.Empty;
+
         [JsonPropertyName("placeholder_text")]
         public string PlaceholderText { get; set; } = string.Empty;
+
+        [JsonPropertyName("placeholder_text_ar")]
+        public string PlaceholderTextAr { get; set; } = string.Empty;
 
         [JsonPropertyName("description")]
         public string? Description { get; set; }
 
         [JsonPropertyName("help_text")]
         public string? HelpText { get; set; }
+
+        [JsonPropertyName("help_text_ar")]
+        public string? HelpTextAr { get; set; }
 
         [JsonPropertyName("required")]
         public bool? Required { get; set; }
